@@ -28,6 +28,6 @@ module.exports = (sequelize) => {
       allowNull: false,
       type: Sequelize.STRING
     }
-  }, { tableName: 'Users'})
+  }, { tableName: 'Users', timestamps: false },)
   return model;
 };
