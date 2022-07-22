@@ -1,6 +1,7 @@
 const error = {
-  validadeError: 400,
+  ValidationError: 400,
   NotFoundError: 404,
+  UserRegistered: 409,
 };
 
 const errorHandleMiddlewares = (err, _req, res, _next) => {
