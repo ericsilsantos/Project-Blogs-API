@@ -28,6 +28,12 @@ module.exports = (sequelize) => {
       allowNull: false,
       type: Sequelize.STRING
     }
-  }, { tableName: 'Users', timestamps: false },)
+  }, { tableName: 'Users', timestamps: false },);
+  model.associate = (models) => {
+    model.hasMany(models.BlogPost, {
+      as: 'blogpost',
+      foreignKey: 'userId',
+    });
+  };
   return model;
 };
