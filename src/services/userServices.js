@@ -35,6 +35,14 @@ const userServices = {
     if (!users) throwNotFound('Users not found');
     return users;
   },
+  async getUserById(id) {
+    const user = await models.User.findByPk(id, {
+        raw: true,
+        attributes: { exclude: ['password'] },
+      });
+    if (!user) throwNotFound('User does not exist');
+    return user;
+  },
 };
 
 module.exports = userServices;
