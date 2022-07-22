@@ -1,5 +1,7 @@
 const error = {
   ValidationError: 400,
+  TokenInvalid: 401,
+  TokenNotFound: 401,
   NotFoundError: 404,
   UserRegistered: 409,
 };
