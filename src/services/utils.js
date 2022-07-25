@@ -22,9 +22,16 @@ const throwTokenInvalid = (message) => {
   throw error;
 };
 
+const throwCategoryNotFound = (message) => {
+  const error = new Error(message);
+  error.name = 'CategoryInvalid';
+  throw error;
+};
+
 module.exports = {
   throwUserRegistered,
   throwNotFound,
   throwTokenNotFound,
   throwTokenInvalid,
+  throwCategoryNotFound,
 };

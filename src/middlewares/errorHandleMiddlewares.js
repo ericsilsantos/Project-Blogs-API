@@ -1,5 +1,6 @@
 const error = {
   ValidationError: 400,
+  CategoryInvalid: 400,
   TokenInvalid: 401,
   TokenNotFound: 401,
   NotFoundError: 404,
